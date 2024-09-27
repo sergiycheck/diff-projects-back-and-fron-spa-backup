@@ -1,0 +1,26 @@
+org: sergiycheck
+app: word-calculations
+service: word-calculations
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  filterWordsByTypeHandler:
+    handler: handler.filterWordsByTypeHandler
+    events:
+      - http:
+          path: /
+          method: post
+          cors: true
+          request:
+            schemas:
+              application/json:
+                schema: ${file(./src/input-words.schema.json)}
+                name: InputWordsModel
+                description: "Validation model for input words"
+
+plugins:
+  - serverless-plugin-typescript

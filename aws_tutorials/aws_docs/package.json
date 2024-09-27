@@ -1,0 +1,27 @@
+{
+  "name": "aws_docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clear": "rm -rf index.js && rm -rf function.zip",
+    "zip": "zip function.zip index.js",
+    "build": "tsc",
+    "deploy:create": "./deploy-create.sh",
+    "deploy:update": "./deploy-update.sh",
+    "test:sh": "./test/sh/test.sh",
+    "create_event_source_mapping": "./create_event_source_mapping.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-lambda": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.131",
+    "@types/node": "^20.11.0",
+    "esbuild": "^0.19.11",
+    "typescript": "^5.3.3"
+  }
+}

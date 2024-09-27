@@ -1,0 +1,22 @@
+@host=http://localhost:3030
+
+### get
+GET {{host}}/
+
+
+### get health
+GET {{host}}/health/check
+
+
+### post user
+POST {{host}}/products/create
+Content-Type: application/json
+
+{
+  "name": "product 1",
+  "description": "product 1 description"
+}
+
+### get products
+
+GET {{host}}/products

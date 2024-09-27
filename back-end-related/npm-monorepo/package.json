@@ -1,0 +1,16 @@
+{
+  "name": "my-app",
+  "private": true,
+  "scripts": {
+    "build": "tsc --build --verbose tsconfig.build.json"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.2",
+    "@types/node": "^20.6.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}

@@ -1,0 +1,79 @@
+type User {
+  id: Int!
+  firstName: String
+  lastName: String
+  username: String!
+  email: String!
+  isActive: Boolean
+  created_at: String!
+  posts: [Post]
+}
+
+input CreateUserInput {
+  email: String!
+  username: String
+  firstName: String
+  lastName: String
+}
+
+input UpdateUserInput {
+  id: Int!
+  firstName: String
+  lastName: String
+  username: String
+  email: String
+}
+
+type Post {
+  id: Int!
+  title: String!
+  votes: Int
+  userId: Int!
+  user: User!
+  created_at: String!
+}
+
+input CreatePostInput {
+  title: String!
+  userId: Int!
+}
+
+input UpdatePostInput {
+  id: Int!
+  title: String!
+  userId: Int!
+}
+
+input GetPaginatedInput {
+  page: Int!
+  perPage: Int
+}
+
+input GetPostsByUser {
+  userId: Int!
+}
+
+type Query {
+  users(input: GetPaginatedInput): [User]!
+  userById(id: Int!): User
+  getUsersByFirstAndLast(firstName: String, lastName: String = ""): [User]
+
+  posts(input: GetPaginatedInput): [Post]!
+  postById(id: Int!): Post
+  postsByUserId(input: GetPostsByUser!): [Post]!
+}
+
+type Mutation {
+  createUser(input: CreateUserInput!): User!
+  updateUser(input: UpdateUserInput!): User!
+  deleteUser(userId: Int!): User!
+
+  createPost(input: CreatePostInput!): Post!
+  updatePost(input: UpdatePostInput!): Post!
+  upvotePost(postId: Int!): Post!
+  deletePost(postId: Int!): Post!
+}
+
+type Subscription {
+  createdPost(input: String!): Post!
+}

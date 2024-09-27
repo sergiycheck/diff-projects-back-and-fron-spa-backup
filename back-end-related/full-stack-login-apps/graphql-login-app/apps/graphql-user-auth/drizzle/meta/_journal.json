@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1697797399267,
+      "tag": "0000_orange_mimic",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1697982599157,
+      "tag": "0001_gorgeous_longshot",
+      "breakpoints": true
+    }
+  ]
+}

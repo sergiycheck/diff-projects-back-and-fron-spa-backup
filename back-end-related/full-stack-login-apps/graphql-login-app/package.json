@@ -1,0 +1,17 @@
+{
+  "name": "graphql-login-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": {
+    "packages": [
+      "packages/ui-kit",
+      "apps/graphql-user-auth",
+      "apps/vite-react-user-auth"
+    ]
+  },
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,61 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ResponseTodo {
+  """String id of todo"""
+  id: ID!
+  name: String!
+  isDone: Boolean
+  tag: String
+  createdAt: String!
+  updatedAt: String!
+}
+
+type RemoveResponse {
+  acknowledged: Boolean!
+  deletedCount: Float!
+}
+
+type ResponseTodoEdge {
+  cursor: String!
+  node: ResponseTodo!
+}
+
+type ResponseTodoPageInfo {
+  startCursor: String!
+  endCursor: String!
+  hasPreviousPage: Boolean!
+  hasNextPage: Boolean!
+}
+
+type PaginatedResponseTodo {
+  edges: [ResponseTodoEdge!]
+  pageInfo: ResponseTodoPageInfo!
+}
+
+type Query {
+  todos(page: Int!, limit: Int!): [ResponseTodo!]!
+  queryCursorBasedPaginated(limit: Int!, previousPageCursor: String, nextPageCursor: String): PaginatedResponseTodo!
+  todo(id: String!): ResponseTodo!
+  getTodosByArgs(tag: String = "", name: String): [ResponseTodo!]!
+}
+
+type Mutation {
+  createTodo(createTodoInput: CreateTodoInput!): ResponseTodo!
+  updateTodo(updateTodoInput: UpdateTodoInput!): ResponseTodo!
+  removeTodo(id: String!): RemoveResponse!
+}
+
+input CreateTodoInput {
+  name: String!
+  isDone: Boolean!
+  tag: String
+}
+
+input UpdateTodoInput {
+  name: String
+  isDone: Boolean
+  tag: String
+  id: String!
+}

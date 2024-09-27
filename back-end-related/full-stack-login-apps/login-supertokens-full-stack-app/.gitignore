@@ -1,0 +1,6 @@
+# .gitignore
+node_modules
+dist
+build
+client_secret_683274934185-dmk54aa8p0cto8jplhgiahsi7g9ednh2.apps.googleusercontent.com.json
+.DS_Store

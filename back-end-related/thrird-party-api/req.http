@@ -1,0 +1,10 @@
+@host=http://localhost:3000
+
+### get health
+
+GET {{host}}/health
+
+
+### test api key
+
+GET {{host}}/ping

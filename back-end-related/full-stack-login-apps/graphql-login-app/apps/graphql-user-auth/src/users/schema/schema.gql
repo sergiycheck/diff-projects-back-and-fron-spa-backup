@@ -1,0 +1,42 @@
+type User {
+  id: Int!
+  name: String
+  email: String
+  createdAt: String
+  updatedAt: String
+}
+
+type AuthInfo {
+  accessToken: String
+}
+
+type LoginResponse {
+  user: User
+  authInfo: AuthInfo
+}
+
+input GetUserInput {
+  id: Int
+  name: String
+  email: String
+}
+
+input LoginUserInput {
+  email: String
+  password: String
+}
+
+input RegisterUserInput {
+  name: String
+  email: String
+  password: String
+}
+
+type Query {
+  getUser(getUserInput: GetUserInput!): User
+}
+
+type Mutation {
+  registerUser(registerUserInput: RegisterUserInput!): LoginResponse
+  loginUser(loginUserInput: LoginUserInput!): LoginResponse
+}

@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ESNext" /* Specify the ECMAScript target version */,
+    "module": "commonjs" /* Specify module system (CommonJS for AWS Lambda) */,
+    "strict": true /* Enable strict mode */,
+    "esModuleInterop": true /* Enable interoperability between CommonJS and ES Modules */,
+    "skipLibCheck": true /* Skip type checking of declaration files */,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "." /* Output directory for transpiled files */,
+    "rootDir": "./src" /* Root directory of TypeScript source files */,
+    "declaration": false /* Generate corresponding .d.ts file */,
+    "resolveJsonModule": true /* Include JSON imports as modules */,
+    "isolatedModules": true /* Ensure each file is treated as a separate module */,
+    "lib": ["ES2017"],
+    "moduleResolution": "node",
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts"] /* Specify the files to be included in compilation */,
+  "exclude": ["node_modules", "dist"] /* Specify the files to be excluded from compilation */
+}

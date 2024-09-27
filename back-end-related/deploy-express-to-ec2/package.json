@@ -1,0 +1,19 @@
+{
+  "name": "deploy-express-to-ec2",
+  "version": "1.0.0",
+  "description": "Continuous Deployment with GitHub Actions, DockerHub, and AWS EC2",
+  "type": "module",
+  "scripts": {
+    "debug": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,15 @@
+### create a new user
+curl --location --request POST 'https://st-dev-43c25af0-6dab-11ee-84b3-711365a8366c.aws.supertokens.io/recipe/dashboard/user' \
+--header 'rid: dashboard' \
+--header 'api-key: dwZS3nbXX2fpA82HIIP=t4=Jjj' \
+--header 'Content-Type: application/json' \
+--data-raw '{"email": "user1@gmail.com","password": "user1pass_nnf"}'
+
+# {
+#   "status": "OK",
+#   "user": {
+#     "email": "user1@gmail.com",
+#     "userId": "4aa33236-6cde-4741-ae6d-2b4090c12b74",
+#     "timeJoined": 1697631711010
+#   }
+# }

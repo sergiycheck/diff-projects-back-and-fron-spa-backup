@@ -1,0 +1,22 @@
+curl requests
+https://linuxize.com/post/curl-post-request/
+
+shell scripts
+https://www.shellscript.sh/
+
+file upload ****
+https://github.com/expressjs/multer#multeropts
+
+expressjs 5 api
+http://expressjs.com/en/5x/api.html#path-examples
+
+
+serve localhost site over https
+https://web.dev/how-to-use-local-https/
+
+sh command reference
+https://www.computerhope.com/unix/ush.htm
+
+spaces in docker/docker-compose file
+https://stackoverflow.com/questions/46141148/declare-env-variable-which-value-include-space-for-docker-docker-compose/46141244#46141244
+
