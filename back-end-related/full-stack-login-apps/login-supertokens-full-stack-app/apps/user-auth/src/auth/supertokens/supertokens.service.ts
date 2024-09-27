@@ -27,8 +27,8 @@ export class SupertokensService {
                 clients: [
                   {
                     clientId:
-                      '683274934185-dmk54aa8p0cto8jplhgiahsi7g9ednh2.apps.googleusercontent.com',
-                    clientSecret: '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',
+                      '',
+                    clientSecret: '',
                   },
                 ],
               },
